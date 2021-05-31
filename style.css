@@ -1,0 +1,54 @@
+h1.top-header {
+    width: 100%;
+    padding: 5px 0px 15px 0px;
+    text-align: center;
+    color: azure;
+    font-weight: 700;
+    margin-top: 30px;
+    background-color: #fa9e19;
+    margin-bottom: 50px;
+}
+.top-heading h4 {
+    color: forestgreen;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+}
+.top-heading h4 span {
+    color: red;
+    border: 2px solid #fa9e19;
+    padding: 0px 8px 0px;
+    border-radius: 5px;
+}
+h1.score-heading {
+    font-size: 30px;
+    font-weight: bold;
+    color: forestgreen;
+    margin-bottom: 30px;
+}
+.top-heading {
+    margin-bottom: 50px;
+}
+ul.notification {
+    margin-top: 50px;
+    padding: 0;
+}
+ul.notification li {
+    list-style: none;
+}
+ul.notification li {
+    border-radius: 5px;
+    margin-bottom: 5px;
+    padding: 5px 10px;
+}
+p.invalid-signal.bg-warning{
+    border-radius: 5px;
+    margin-bottom: 5px;
+    padding: 5px 10px;
+}
+h4 i {
+    border: 2px solid #17A2B8;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 16px !important;
+}
