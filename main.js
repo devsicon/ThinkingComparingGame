@@ -1,13 +1,14 @@
 
-let inputNumber = document.getElementById('inputdata');
+const inputNumber = document.getElementById('inputdata');
 const gueesingBtn = document.getElementById('guesbtn')
-let ul = document.querySelector('ul.notification');
-
-let invalidSignal = document.querySelector('p.invalid-signal');
-
-let resetBtn = document.getElementById('resetbtn');
-
-// console.log(resetBtn);
+const ul = document.querySelector('ul.notification');
+const invalidSignal = document.querySelector('p.invalid-signal');
+const resetBtn = document.getElementById('resetbtn');
+const progressBar = document.querySelector('.progress-bar');
+    progressBar.innerText = 0 + '%';
+    progressBar.style.width = 5 + '%';
+const wining = document.querySelector('img.wining');
+const loss = document.querySelector('img.loss')
 
 
 gueesingBtn.addEventListener('click', () => {
@@ -30,6 +31,8 @@ gueesingBtn.addEventListener('click', () => {
         li.innerText = `Great!! You are All Rounder`;
         ul.appendChild(li);
         inputNumber.value = "";
+        wining.style.display = "block";
+        loss.style.display = "none";
     }else{
         let li = document.createElement('li');
         li.classList.add("bg-warning")
@@ -37,6 +40,8 @@ gueesingBtn.addEventListener('click', () => {
         li.innerText = `Sorry It's wrong!! It was ${guessNumber}`;
         ul.appendChild(li);
         inputNumber.value = "";
+        loss.style.display = "block";
+        wining.style.display = "none";
        
     }
 
@@ -45,6 +50,10 @@ gueesingBtn.addEventListener('click', () => {
         invalidSignal.textContent = "You over your gaming limit, see your final score";
         invalidSignal.classList.add("bg-warning");
     } 
+
+    let progressBarPersentage = ul.childElementCount * (100 / 5);
+    progressBar.innerText = progressBarPersentage + '%';
+    progressBar.style.width = progressBarPersentage + '%';
 });
 
 resetBtn.addEventListener('click', () => {
@@ -52,7 +61,10 @@ resetBtn.addEventListener('click', () => {
     invalidSignal.textContent = "";
     invalidSignal.classList = "invalid-signal";
     ul.innerHTML = "";
+    inputNumber.value = "";
+    progressBar.innerText = 0 + '%';
+    progressBar.style.width = 5 + '%';
+    wining.style.display = "none";
+    loss.style.display = "none";
 
 })
-
-
